@@ -1,0 +1,10 @@
+node_modules/
+dist/
+distlinux/
+*.docx
+*.pdf
+book/merged/
+book/merged_new/
+book/oldout/
+book/newout/
+__pycache__/

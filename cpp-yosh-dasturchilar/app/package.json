@@ -1,0 +1,58 @@
+{
+  "name": "cpp-yosh-dasturchilar",
+  "productName": "C++ Yosh dasturchilar",
+  "version": "2.0.1",
+  "description": "C++ dasturlash tili — yosh dasturchilar uchun qo'llanma",
+  "main": "main.js",
+  "author": "Xayrullo Kulmatov",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --x64"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "33.4.11",
+    "electron-builder": "26.18.1",
+    "pe-library": "^2.0.3",
+    "resedit": "^3.1.1"
+  },
+  "build": {
+    "appId": "uz.hayrullo.cppkitob",
+    "productName": "C++ Yosh dasturchilar",
+    "copyright": "© 2026 Xayrullo Kulmatov",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "C++ Yosh dasturchilar",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "artifactName": "CPP_Yosh_dasturchilar_Setup_${version}.exe"
+    }
+  }
+}

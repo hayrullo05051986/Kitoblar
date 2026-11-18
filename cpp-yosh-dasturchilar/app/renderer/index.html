@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' blob: data:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+<title>C++ Yosh dasturchilar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside id="side">
+  <div class="brand"><img src="icon.png" alt=""><div><b>C++</b><span data-ui="sub"></span></div></div>
+  <input id="search" type="search" autocomplete="off">
+  <div id="progress"><div id="pbar"></div><span id="ptext"></span></div>
+  <nav id="toc"></nav>
+  <div class="credit" data-ui="credit"></div>
+</aside>
+<main>
+  <header id="bar">
+    <button id="menuBtn" data-tip="toc">☰</button>
+    <div class="grp">
+      <span class="lbl" data-ui="alpha"></span>
+      <div class="seg" id="alpha"><button data-a="0"></button><button data-a="1"></button></div>
+    </div>
+    <div class="grp">
+      <span class="lbl" data-ui="font"></span>
+      <select id="fontSel">
+        <option value="segoe">Segoe UI</option>
+        <option value="arial">Arial</option>
+        <option value="times">Times New Roman</option>
+        <option value="verdana">Verdana</option>
+      </select>
+      <button id="fontMinus" data-tip="smaller">A−</button><span id="fsVal" class="lbl"></span><button id="fontPlus" data-tip="bigger">A+</button>
+    </div>
+    <div class="grp right">
+      <button id="themeBtn" data-tip="theme">🌙</button>
+      <button id="notesBtn" class="on">📝 <span data-ui="notes"></span></button>
+    </div>
+  </header>
+  <div id="readbar"><div id="readfill"></div></div>
+  <div id="work">
+    <article id="page"></article>
+    <aside id="notes">
+      <div class="nhead"><b data-ui="myNotes"></b><span id="nsaved" class="lbl"></span></div>
+      <div id="ntopic" class="lbl"></div>
+      <textarea id="ntext" spellcheck="false"></textarea>
+      <div class="nbtns">
+        <button id="nAll" data-ui="allNotes"></button>
+        <button id="nExport" data-ui="export"></button>
+      </div>
+      <p class="hint" data-ui="notesHint"></p>
+    </aside>
+  </div>
+  <footer id="nav">
+    <button id="prevBtn"></button>
+    <button id="doneBtn"></button>
+    <button id="nextBtn"></button>
+  </footer>
+</main>
+
+<div id="resumeDlg" class="dlg hidden"><div class="box">
+  <div class="big-ico">📖</div>
+  <h3 data-ui="welcomeBack"></h3>
+  <p id="resumeText"></p>
+  <div class="btns center">
+    <button id="resumeYes" class="big"></button>
+    <button id="resumeNo"></button>
+  </div>
+</div></div>
+
+<div id="allDlg" class="dlg hidden"><div class="box wide">
+  <h3 data-ui="allNotes"></h3>
+  <div id="allList"></div>
+  <div class="btns end"><button id="allExport" data-ui="export"></button><button id="allClose" data-ui="close"></button></div>
+</div></div>
+
+<div id="imgDlg" class="dlg hidden"><img id="imgBig" alt=""></div>
+
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
